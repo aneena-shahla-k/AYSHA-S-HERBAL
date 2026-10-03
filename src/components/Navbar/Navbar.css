@@ -1,0 +1,239 @@
+/* =========================================================
+   AYSHA'S HERBAL CARE - NAVBAR
+========================================================= */
+
+.ay-navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--cream, #faf9f1);
+  border-bottom: 1px solid var(--border, rgba(57, 87, 61, 0.12));
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: all 0.25s ease;
+}
+
+.ay-navbar-inner {
+  width: min(var(--container-max-width, 1180px), calc(100% - 10vw));
+  margin: 0 auto;
+  padding: 12px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.ay-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.ay-logo img {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.ay-logo:hover img {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+/* =========================================================
+   DESKTOP NAV LINKS
+========================================================= */
+
+.ay-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.ay-nav-link {
+  font-family: var(--font-sans, "Inter", sans-serif);
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--text-heading, #24352c);
+  position: relative;
+  padding: 4px 6px;
+  text-decoration: none;
+  letter-spacing: 0.2px;
+  transition: color 0.2s ease;
+}
+
+.ay-nav-link:hover {
+  color: var(--forest, #315b3b);
+}
+
+.ay-nav-link.active {
+  color: var(--forest, #315b3b);
+  font-weight: 600;
+}
+
+.ay-nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 6px;
+  right: 6px;
+  height: 2px;
+  background-color: var(--forest, #315b3b);
+  border-radius: 2px;
+}
+
+.ay-nav-dot {
+  color: var(--forest-light, #55745b);
+  opacity: 0.45;
+  font-size: 11px;
+}
+
+/* =========================================================
+   ACTION BUTTONS
+========================================================= */
+
+.ay-nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ay-icon-btn,
+.ay-cart-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--forest, #315b3b);
+  background: transparent;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.ay-icon-btn:hover,
+.ay-cart-btn:hover {
+  background-color: rgba(49, 91, 59, 0.08);
+  color: var(--forest-dark, #243f2c);
+  border-color: rgba(49, 91, 59, 0.12);
+}
+
+.ay-cart-count {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  background-color: var(--forest, #315b3b);
+  color: #ffffff;
+  font-family: var(--font-sans, "Inter", sans-serif);
+  font-size: 9px;
+  font-weight: 600;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid var(--cream, #faf9f1);
+}
+
+.ay-menu-btn {
+  display: none;
+  color: var(--forest, #315b3b);
+  width: 36px;
+  height: 36px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
+
+/* =========================================================
+   MOBILE MENU DROPDOWN
+========================================================= */
+
+.ay-mobile-menu {
+  display: none;
+  flex-direction: column;
+  background-color: var(--cream, #faf9f1);
+  border-top: 1px solid var(--border, rgba(57, 87, 61, 0.12));
+  padding: 18px 20px 24px;
+  gap: 12px;
+}
+
+.ay-mobile-link {
+  font-family: var(--font-sans, "Inter", sans-serif);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-heading, #24352c);
+  padding: 10px 0;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(49, 91, 59, 0.08);
+  transition: color 0.2s ease, padding-left 0.2s ease;
+}
+
+.ay-mobile-link:hover,
+.ay-mobile-link.active {
+  color: var(--forest, #315b3b);
+  font-weight: 600;
+  padding-left: 4px;
+}
+
+.ay-mobile-shop-btn {
+  margin-top: 10px;
+  background-color: var(--forest, #315b3b);
+  color: #ffffff;
+  padding: 11px 22px;
+  border-radius: var(--radius-pill, 30px);
+  text-align: center;
+  font-family: var(--font-sans, "Inter", sans-serif);
+  font-weight: 500;
+  font-size: 11px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.ay-mobile-shop-btn:hover {
+  background-color: var(--forest-dark, #243f2c);
+}
+
+/* =========================================================
+   TABLET & MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+  .ay-navbar-inner {
+    width: calc(100% - 40px);
+    padding: 10px 0;
+  }
+
+  .ay-nav-links {
+    display: none;
+  }
+
+  .ay-menu-btn {
+    display: flex;
+  }
+
+  .ay-mobile-menu.open {
+    display: flex;
+  }
+
+  .ay-logo img {
+    height: 40px;
+  }
+}

@@ -1,0 +1,729 @@
+/* =========================================================
+   WHY CHOOSE US
+========================================================= */
+
+.why-choose-section {
+  width: 100%;
+  padding: 80px max(5%, calc((100% - 1280px) / 2));
+  box-sizing: border-box;
+  background: #f7f6ed;
+  overflow: hidden;
+}
+
+/* =========================================================
+   MAIN CONTAINER
+========================================================= */
+
+.why-choose-container {
+  position: relative;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+
+  display: grid;
+
+  /* More space for the image */
+  grid-template-columns: 34% 38% 28%;
+
+  align-items: center;
+
+  overflow: visible;
+
+  border-radius: 24px;
+  background: #f7f6ed;
+}
+
+/* =========================================================
+   LEFT IMAGE AREA
+========================================================= */
+
+.why-choose-image-wrap {
+  position: relative;
+
+  width: 100%;
+  min-height: 440px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: visible;
+}
+
+/* Soft glow behind image */
+
+.why-choose-image-glow {
+  position: absolute;
+
+  width: 125%;
+  height: 90%;
+
+  left: -12%;
+  top: 5%;
+
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(179, 194, 151, 0.42),
+    rgba(179, 194, 151, 0.18) 35%,
+    rgba(179, 194, 151, 0) 72%
+  );
+
+  filter: blur(28px);
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   LARGE AYURVEDA IMAGE
+========================================================= */
+
+.why-choose-image {
+  position: relative;
+
+  z-index: 2;
+
+  /* Increased significantly */
+  width: 145%;
+
+  max-width: 500px;
+
+  height: auto;
+
+  display: block;
+
+  object-fit: contain;
+
+  filter: drop-shadow(
+    0 22px 32px rgba(57, 68, 43, 0.13)
+  );
+
+  transition:
+    transform 0.5s ease,
+    filter 0.5s ease;
+}
+
+/* Subtle hover */
+
+.why-choose-image-wrap:hover .why-choose-image {
+  transform: scale(1.035);
+  filter: drop-shadow(
+    0 26px 38px rgba(57, 68, 43, 0.16)
+  );
+}
+
+/* =========================================================
+   CENTER CONTENT
+========================================================= */
+
+.why-choose-content {
+  position: relative;
+
+  z-index: 5;
+
+  width: 100%;
+  max-width: 560px;
+
+  padding: 40px 38px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.why-choose-eyebrow {
+  display: inline-flex;
+  align-items: center;
+
+  margin-bottom: 10px;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  letter-spacing: 2px;
+  line-height: 1.2;
+
+  color: #53665b;
+}
+
+.why-choose-eyebrow::before {
+  content: "";
+
+  width: 30px;
+  height: 1px;
+
+  margin-right: 11px;
+
+  background: #315c3b;
+}
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.why-choose-content h2 {
+  margin: 10px 0;
+
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: clamp(40px, 3.6vw, 54px);
+
+  font-weight: 600;
+
+  line-height: 1.08;
+
+  letter-spacing: -0.7px;
+
+  color: #24352c;
+}
+
+.why-choose-content h2 em {
+  font-style: italic;
+  color: #55745b;
+}
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.why-choose-content p {
+  max-width: 530px;
+
+  margin: 18px 0 0;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 14.5px;
+
+  font-weight: 400;
+
+  line-height: 1.65;
+
+  color: #66726b;
+}
+
+/* =========================================================
+   CTA BUTTON
+========================================================= */
+
+.why-choose-button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  margin-top: 24px;
+
+  padding: 12px 24px;
+
+  border: none;
+  border-radius: 30px;
+
+  background: #315b3b;
+
+  color: #ffffff;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 11px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 20px rgba(17, 97, 60, 0.14);
+
+  transition: all 0.25s ease;
+}
+
+.why-choose-button:hover {
+  background: #243f2c;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 12px 24px rgba(17, 97, 60, 0.18);
+}
+
+.why-choose-button svg {
+  transition: transform 0.2s ease;
+}
+
+.why-choose-button:hover svg {
+  transform: translateX(3px);
+}
+
+/* =========================================================
+   RIGHT BENEFITS
+========================================================= */
+
+.why-choose-benefits {
+  width: 100%;
+
+  padding: 40px 5px 40px 18px;
+
+  box-sizing: border-box;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  column-gap: 22px;
+  row-gap: 36px;
+
+  align-content: center;
+}
+
+.why-benefit-card {
+  width: 100%;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 12px;
+
+  min-width: 0;
+}
+
+.why-benefit-icon {
+  width: 42px;
+  height: 42px;
+
+  min-width: 42px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(57, 93, 70, 0.13);
+
+  background: rgba(255, 255, 255, 0.55);
+
+  color: #315b3b;
+}
+
+.why-benefit-info {
+  min-width: 0;
+
+  padding-top: 2px;
+}
+
+.why-benefit-info h3 {
+  margin: 0;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 12.5px;
+
+  font-weight: 600;
+
+  line-height: 1.3;
+
+  color: #183d29;
+}
+
+.why-benefit-info h3 span {
+  font-weight: 500;
+  color: #476551;
+}
+
+.why-benefit-info p {
+  margin: 5px 0 0;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 10.5px;
+
+  line-height: 1.45;
+
+  color: #66726b;
+}
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1400px) {
+
+  .why-choose-section {
+    padding-top: 95px;
+    padding-bottom: 95px;
+  }
+
+  .why-choose-container {
+    max-width: 1380px;
+
+    grid-template-columns:
+      36%
+      37%
+      27%;
+  }
+
+  .why-choose-image-wrap {
+    min-height: 500px;
+  }
+
+  .why-choose-image {
+    width: 150%;
+    max-width: 560px;
+  }
+
+  .why-choose-content {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .why-choose-benefits {
+    row-gap: 42px;
+  }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .why-choose-section {
+    padding: 65px 35px;
+  }
+
+  .why-choose-container {
+    grid-template-columns:
+      32%
+      40%
+      28%;
+  }
+
+  .why-choose-image-wrap {
+    min-height: 390px;
+  }
+
+  .why-choose-image {
+    width: 145%;
+    max-width: 430px;
+  }
+
+  .why-choose-content {
+    padding: 30px 25px;
+  }
+
+  .why-choose-content h2 {
+    font-size: 40px;
+  }
+
+  .why-choose-benefits {
+    padding-left: 10px;
+    column-gap: 14px;
+    row-gap: 28px;
+  }
+
+  .why-benefit-card {
+    gap: 9px;
+  }
+
+  .why-benefit-icon {
+    width: 37px;
+    height: 37px;
+    min-width: 37px;
+  }
+}
+
+/* =========================================================
+   TABLET / MOBILE STACK
+========================================================= */
+
+@media (max-width: 950px) {
+
+  .why-choose-section {
+    padding: 60px 24px;
+  }
+
+  .why-choose-container {
+
+    grid-template-columns: 1fr;
+
+    gap: 34px;
+
+    max-width: 700px;
+
+    margin: 0 auto;
+  }
+
+  /* Image comes first */
+
+  .why-choose-image-wrap {
+    order: 1;
+
+    width: 100%;
+
+    min-height: 0;
+
+    max-width: 430px;
+
+    margin: 0 auto;
+  }
+
+  .why-choose-image {
+    width: 125%;
+
+    max-width: 460px;
+  }
+
+  .why-choose-content {
+    order: 2;
+
+    width: 100%;
+
+    padding: 0;
+
+    max-width: 100%;
+  }
+
+  .why-choose-benefits {
+    order: 3;
+
+    padding: 10px 0 0;
+
+    column-gap: 25px;
+
+    row-gap: 28px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .why-choose-section {
+    padding: 55px 20px;
+  }
+
+  .why-choose-container {
+    gap: 28px;
+  }
+
+  /* Bigger mobile image */
+
+  .why-choose-image-wrap {
+    width: 100%;
+
+    max-width: 380px;
+
+    min-height: 260px;
+
+    margin: 0 auto;
+  }
+
+  .why-choose-image-glow {
+    width: 115%;
+    height: 100%;
+
+    left: -7%;
+    top: 0;
+  }
+
+  .why-choose-image {
+    width: 125%;
+
+    max-width: 380px;
+
+    filter: drop-shadow(
+      0 18px 26px rgba(57, 68, 43, 0.12)
+    );
+  }
+
+  /* Eyebrow */
+
+  .why-choose-eyebrow {
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 6px;
+  }
+
+  .why-choose-eyebrow::before {
+    width: 20px;
+    margin-right: 6px;
+  }
+
+  /* Heading */
+
+  .why-choose-content h2 {
+    font-size: 32px;
+
+    line-height: 1.13;
+
+    margin: 6px 0 12px;
+
+    letter-spacing: -0.4px;
+  }
+
+  /* Description */
+
+  .why-choose-content p {
+    font-size: 13px;
+
+    line-height: 1.55;
+
+    margin: 12px 0 0;
+  }
+
+  /* Benefits */
+
+  .why-choose-benefits {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    column-gap: 18px;
+
+    row-gap: 24px;
+
+    padding-top: 5px;
+  }
+
+  .why-benefit-card {
+    gap: 9px;
+  }
+
+  .why-benefit-icon {
+    width: 35px;
+    height: 35px;
+
+    min-width: 35px;
+  }
+
+  .why-benefit-icon svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .why-benefit-info h3 {
+    font-size: 10.8px;
+
+    line-height: 1.25;
+  }
+
+  .why-benefit-info p {
+    font-size: 9.3px;
+
+    margin-top: 3px;
+
+    line-height: 1.35;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 430px) {
+
+  .why-choose-section {
+    padding: 48px 18px;
+  }
+
+  .why-choose-container {
+    gap: 25px;
+  }
+
+  /* Keep image noticeably large */
+
+  .why-choose-image-wrap {
+    max-width: 350px;
+
+    min-height: 235px;
+  }
+
+  .why-choose-image {
+    width: 130%;
+
+    max-width: 350px;
+  }
+
+  .why-choose-content h2 {
+    font-size: 29px;
+  }
+
+  .why-choose-content p {
+    font-size: 12.5px;
+  }
+
+  .why-choose-benefits {
+    column-gap: 12px;
+    row-gap: 20px;
+  }
+
+  .why-benefit-card {
+    gap: 8px;
+  }
+
+  .why-benefit-icon {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+  }
+
+  .why-benefit-icon svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .why-benefit-info h3 {
+    font-size: 10.5px;
+  }
+
+  .why-benefit-info p {
+    font-size: 9px;
+  }
+}
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 360px) {
+
+  .why-choose-image-wrap {
+    max-width: 320px;
+    min-height: 215px;
+  }
+
+  .why-choose-image {
+    width: 125%;
+    max-width: 320px;
+  }
+
+  .why-choose-content h2 {
+    font-size: 27px;
+  }
+
+  .why-choose-benefits {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .why-benefit-card {
+    width: 100%;
+  }
+}

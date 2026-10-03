@@ -1,0 +1,87 @@
+.trust-features {
+  padding: 32px 0;
+}
+
+.trust-features__grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 32px;
+  align-items: start;
+}
+
+.trust-feature-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+  padding: 0 8px;
+}
+
+.trust-feature-item__icon {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background-color: #ffffff;
+  color: var(--forest);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--sage-border);
+  box-shadow: var(--shadow-subtle);
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.trust-feature-item__icon svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+}
+
+.trust-feature-item:hover .trust-feature-item__icon {
+  background-color: var(--forest);
+  color: #ffffff;
+  transform: translateY(-2px) scale(1.05);
+}
+
+.trust-feature-item__text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  line-height: 1.35;
+}
+
+.trust-feature-item__text strong {
+  font-size: 0.88rem;
+  color: var(--forest);
+  font-weight: 600;
+}
+
+.trust-feature-item__text span {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+/* Tablet: Horizontal scroll or flexible wrap */
+@media (max-width: 1024px) {
+  .trust-features__grid {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 24px;
+  }
+}
+
+/* Mobile: 2-column layout with 5th item centered */
+@media (max-width: 640px) {
+  .trust-features__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 16px;
+  }
+
+  /* Centers the odd 5th item across both columns */
+  .trust-feature-item:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    max-width: 240px;
+    margin: 0 auto;
+  }
+}

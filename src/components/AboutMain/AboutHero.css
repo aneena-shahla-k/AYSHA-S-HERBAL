@@ -1,0 +1,146 @@
+.hg-about-hero {
+  min-height: 430px;
+  position: relative;
+
+  background-image:
+    url("../../assets/images/about/about-heroo.png");
+
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.hg-hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(249, 248, 232, 0.95) 0%,
+      rgba(249, 248, 232, 0.78) 35%,
+      rgba(249, 248, 232, 0.08) 70%
+    );
+}
+
+.hg-hero-content {
+  position: relative;
+  z-index: 2;
+
+  width: min(1180px, 92%);
+  margin: auto;
+
+  padding: 45px 0 38px;
+}
+
+.hg-eyebrow {
+   display: block;
+  margin-bottom: 8px;
+
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  line-height: 1.2;
+
+  color: #53665b;
+}
+
+.hg-hero-content h2 {
+  margin: 10px 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(42px, 4vw, 56px);
+  font-weight: 600;
+  line-height: 1.08;
+  letter-spacing: -0.8px;
+
+  color: #24352c;
+}
+.hg-hero-content em { 
+   font-style: italic;
+  color: #55745b; 
+}
+
+.hg-hero-content p {
+   max-width: 590px;
+  margin: 25px 0 0;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.55;
+  color: #66726b;
+}
+
+.hg-hero-signature {
+  margin-top: 12px;
+
+  font-family: "Dancing Script", cursive;
+  font-size: 21px;
+  color: #315c3a;
+}
+
+.hg-hero-signature span {
+  margin-left: 8px;
+  font-size: 25px;
+}
+
+@media (max-width: 700px) {
+  .hg-about-hero {
+    min-height: 480px;
+    /* ഇമേജ് മൊബൈലിൽ വലതുവശത്തേക്ക് നീക്കി വെക്കുന്നു, അപ്പോൾ ഇടതുവശത്ത് ടെക്സ്റ്റിന് നല്ല ക്ലിയർ സ്പേസ് കിട്ടും */
+    background-position: 80% center;
+    display: flex;
+    align-items: flex-end; /* അല്ലെങ്കിൽ center */
+  }
+
+  /* ഇടതുവശത്ത് ടെക്സ്റ്റ് തെളിഞ്ഞു കാണാൻ സോഫ്റ്റ് ഗ്രേഡിയന്റ് ഓവർലേ */
+  .hg-hero-overlay {
+    background: linear-gradient(
+      90deg,
+      rgba(249, 248, 232, 0.96) 0%,
+      rgba(249, 248, 232, 0.88) 55%,
+      rgba(249, 248, 232, 0.25) 100%
+    );
+  }
+
+  /* ടെക്സ്റ്റ് ലെഫ്റ്റ് അലൈൻഡ് ആയി നിലനിർത്തുന്നു */
+  .hg-hero-content {
+    text-align: left;
+    padding: 35px 20px;
+    margin: 0;
+    width: 100%;
+  }
+
+  .hg-eyebrow {
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+    color: #4a5c51;
+  }
+
+  .hg-hero-content h2 {
+    font-size: 30px;
+    line-height: 1.15;
+    margin: 0 0 12px;
+    color: #24352c;
+  }
+
+  .hg-hero-content em {
+    color: #43664b;
+  }
+
+  .hg-hero-content p {
+    font-size: 13px;
+    line-height: 1.55;
+    color: #55635b;
+    margin: 0 0 14px;
+    /* ടെക്സ്റ്റ് ഇമേജിലേക്ക് വല്ലാതെ കയറാതിരിക്കാൻ വിഡ്ത് കുറയ്ക്കുന്നു */
+    max-width: 82%; 
+  }
+
+  .hg-hero-signature {
+    font-size: 17px;
+    color: #315c3a;
+    margin-top: 8px;
+  }
+}

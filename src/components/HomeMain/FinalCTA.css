@@ -1,0 +1,133 @@
+/* =========================================================
+   FINAL CTA SECTION
+========================================================= */
+
+.final-cta {
+  width: 100%;
+  padding: 80px max(5%, calc((100% - 1180px) / 2));
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  text-align: center;
+  box-sizing: border-box;
+  border-top: 1px solid var(--sage-border, rgba(49, 91, 59, 0.12));
+  overflow: hidden;
+}
+
+/* Dark/soft overlay for text readability */
+.final-cta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 40, 28, 0.45);
+  z-index: 0;
+}
+
+.final-cta .container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.final-cta__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+/* Heading Typography */
+.final-cta__title {
+  margin: 10px 0 14px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(38px, 3.8vw, 52px);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.6px;
+  color: #ffffff;
+}
+
+.final-cta__title em {
+  font-style: italic;
+  color: #d1e7d0;
+}
+
+/* Subtext / Description */
+.final-cta__text {
+  margin: 0 0 28px;
+  font-family: "Inter", sans-serif;
+  font-size: 14.5px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.92);
+  max-width: 540px;
+}
+
+/* CTA Button - In case there is a button inside */
+.final-cta__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 13px 26px;
+  border: none;
+  border-radius: 30px;
+  background: #ffffff;
+  color: #315b3b;
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.final-cta__btn:hover {
+  background: #f4f6ee;
+  color: #243f2c;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2);
+}
+
+/* =========================================================
+   TABLET & MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+  .final-cta {
+    padding: 55px 20px;
+  }
+
+  .final-cta__title {
+    font-size: 30px;
+    line-height: 1.15;
+    margin: 6px 0 12px;
+  }
+
+  .final-cta__text {
+    font-size: 13px;
+    line-height: 1.55;
+    margin-bottom: 22px;
+    max-width: 100%;
+  }
+
+  .final-cta__btn {
+    padding: 11px 22px;
+    font-size: 10.5px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 400px) {
+  .final-cta__title {
+    font-size: 28px;
+  }
+
+  .final-cta__text {
+    font-size: 12.5px;
+  }
+}

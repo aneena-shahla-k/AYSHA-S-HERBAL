@@ -1,0 +1,124 @@
+.concern-card {
+  background-color: var(--ivory);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+  height: 100%;
+}
+
+.concern-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+  border-color: rgba(24, 60, 41, 0.2);
+}
+
+.concern-card__image-wrap {
+  position: relative;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.concern-card__arch {
+  width: 100%;
+  height: 170px;
+  background-color: #f3eee3;
+  border-radius: 40px 40px var(--radius-sm) var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 16px;
+}
+
+.concern-card__arch img {
+  max-height: 130px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.4s ease;
+  filter: drop-shadow(0 4px 10px rgba(24, 60, 41, 0.08));
+}
+
+.concern-card:hover .concern-card__arch img {
+  transform: scale(1.06);
+}
+
+.concern-card__icon-badge {
+  position: absolute;
+  bottom: -10px;
+  left: 16px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--forest);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(24, 60, 41, 0.15);
+}
+
+.concern-card__content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding-top: 6px;
+}
+
+.concern-card__title {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  color: var(--forest);
+  margin-bottom: 6px;
+}
+
+.concern-card__desc {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.concern-card__benefits {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.concern-card__benefits li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+  color: var(--text);
+}
+
+.benefit-icon {
+  color: var(--forest-light);
+  flex-shrink: 0;
+}
+
+.concern-card__btn {
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background-color: var(--forest);
+  color: #ffffff;
+  padding: 9px 18px;
+  border-radius: var(--radius-pill);
+  font-size: 0.82rem;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.concern-card__btn:hover {
+  background-color: var(--forest-hover);
+  transform: translateY(-1px);
+}

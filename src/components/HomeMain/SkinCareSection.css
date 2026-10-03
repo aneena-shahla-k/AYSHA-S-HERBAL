@@ -1,0 +1,723 @@
+/* =========================================================
+   SKINCARE SECTION
+========================================================= */
+
+.skincare-section {
+  width: 100%;
+  padding: 0;
+  box-sizing: border-box;
+  background: #f7f6ed;
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   FULL WIDTH CONTAINER
+========================================================= */
+
+.skincare-container {
+  position: relative;
+  width: 100%;
+  max-width: none;
+  max-height: 680px;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 0;
+
+  background: #f5f5e9;
+
+  display: flex;
+  align-items: stretch;
+}
+
+
+/* =========================================================
+   LEFT IMAGE
+========================================================= */
+
+.skincare-background {
+  position: absolute;
+  top: 0;
+  left: 110px;
+  bottom: 0;
+  width: 63%;
+  height: 100%;
+
+  z-index: 1;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.skincare-background-image {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  /*
+    Keeps the woman large and visible.
+  */
+  object-position: 52% center;
+}
+
+
+/* =========================================================
+   SOFT WHITE / CREAM FADE
+   Only at the image → content boundary
+========================================================= */
+
+.skincare-background::after {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  right: -1px;
+  bottom: 0;
+
+  /*
+    Wider fade so it blends naturally
+    into the center of the section.
+  */
+  width: 35%;
+
+  background: linear-gradient(
+    90deg,
+    rgba(245, 245, 233, 0) 0%,
+    rgba(245, 245, 233, 0.03) 12%,
+    rgba(245, 245, 233, 0.12) 28%,
+    rgba(245, 245, 233, 0.35) 48%,
+    rgba(245, 245, 233, 0.68) 68%,
+    rgba(245, 245, 233, 0.92) 86%,
+    rgba(245, 245, 233, 1) 100%
+  );
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   RIGHT CONTENT
+========================================================= */
+
+.skincare-right {
+  position: relative;
+
+  z-index: 3;
+
+  width: 50%;
+
+  margin-left: auto;
+
+  padding: 65px 6% 55px 3%;
+
+  box-sizing: border-box;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  /*
+    Very soft cream background.
+    This creates the clean editorial look.
+  */
+ background: linear-gradient(
+  90deg,
+  rgba(245, 245, 233, 0) 0%,
+  rgba(245, 245, 233, 0.35) 12%,
+  rgba(245, 245, 233, 0.78) 25%,
+  rgba(245, 245, 233, 0.96) 40%,
+  #f5f5e9 58%,
+  #f5f5e9 100%
+);
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.skincare-header {
+  width: 100%;
+  max-width: 620px;
+
+  margin-bottom: 30px;
+}
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.skincare-eyebrow {
+  display: inline-flex;
+
+  align-items: center;
+
+  margin-bottom: 10px;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  letter-spacing: 2.2px;
+
+  line-height: 1.2;
+
+  color: #53665b;
+}
+
+
+.skincare-eyebrow::before {
+  content: "";
+
+  width: 30px;
+
+  height: 1px;
+
+  margin-right: 11px;
+
+  background: #315c3b;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.skincare-header h2 {
+  margin: 10px 0;
+
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: clamp(42px, 4vw, 60px);
+
+  font-weight: 600;
+
+  line-height: 1.05;
+
+  letter-spacing: -1px;
+
+  color: #24352c;
+}
+
+
+.skincare-header h2 em {
+  font-style: italic;
+
+  color: #55745b;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.skincare-header p {
+  max-width: 590px;
+
+  margin: 18px 0 0;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 15px;
+
+  font-weight: 400;
+
+  line-height: 1.65;
+
+  color: #66726b;
+}
+
+
+/* =========================================================
+   MAIN CTA
+========================================================= */
+
+.skincare-main-btn {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: fit-content;
+
+  gap: 9px;
+
+  margin-top: 25px;
+
+  padding: 13px 25px;
+
+  border: none;
+
+  border-radius: 30px;
+
+  background: #315b3b;
+
+  color: #ffffff;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.skincare-main-btn:hover {
+  background: #243f2c;
+
+  transform: translateY(-1px);
+
+  box-shadow: 0 10px 22px rgba(20, 91, 56, 0.16);
+}
+
+
+.skincare-main-btn svg {
+  transition: transform 0.2s ease;
+}
+
+
+.skincare-main-btn:hover svg {
+  transform: translateX(3px);
+}
+
+
+/* =========================================================
+   PRODUCTS
+========================================================= */
+
+.skincare-products {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 14px;
+}
+
+
+/* =========================================================
+   PRODUCT CARD
+========================================================= */
+
+.skincare-product-card {
+  width: 100%;
+
+  min-width: 0;
+
+  padding: 9px;
+
+  box-sizing: border-box;
+
+  border-radius: 14px;
+
+  border: 1px solid rgba(54, 74, 58, 0.12);
+
+  background: rgba(255, 255, 255, 0.84);
+
+  box-shadow:
+    0 8px 24px rgba(50, 65, 52, 0.05);
+
+  backdrop-filter: blur(12px);
+
+  display: flex;
+
+  flex-direction: column;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+
+
+.skincare-product-card:hover {
+  transform: translateY(-4px);
+
+  background: rgba(255, 255, 255, 0.96);
+
+  box-shadow:
+    0 14px 30px rgba(50, 65, 52, 0.1);
+}
+
+
+/* =========================================================
+   PRODUCT IMAGE BOX
+========================================================= */
+
+.skincare-product-image {
+  width: 100%;
+
+  height: 150px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  overflow: hidden;
+
+  border-radius: 10px;
+
+  background: #e9e9dc;
+}
+
+
+/* =========================================================
+   PRODUCT IMAGE
+========================================================= */
+
+.skincare-product-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  /*
+    IMPORTANT:
+    Entire bottle stays visible.
+  */
+  object-fit: contain;
+
+  object-position: center;
+
+  padding: 6px;
+
+  box-sizing: border-box;
+
+  transition: transform 0.4s ease;
+}
+
+
+.skincare-product-card:hover
+.skincare-product-image img {
+  transform: scale(1.04);
+}
+
+
+/* =========================================================
+   PRODUCT INFO
+========================================================= */
+
+.skincare-product-info {
+  flex: 1;
+
+  padding: 10px 4px 4px;
+
+  display: flex;
+
+  flex-direction: column;
+}
+
+
+.skincare-product-type {
+  display: block;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 400;
+
+  line-height: 1.35;
+
+  color: #66726b;
+}
+
+
+.skincare-product-info h3 {
+  margin: 4px 0 0;
+
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  line-height: 1.25;
+
+  color: #183d29;
+}
+
+
+/* =========================================================
+   PRICE + BUTTON
+========================================================= */
+
+.skincare-product-bottom {
+  margin-top: auto;
+
+  padding-top: 12px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+
+.skincare-product-bottom strong {
+  font-family: "Inter", sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  color: #183d29;
+}
+
+
+/* =========================================================
+   VIEW PRODUCT
+========================================================= */
+
+.skincare-view-btn {
+  width: 100%;
+
+  min-height: 32px;
+
+  padding: 6px 10px;
+
+  border: 1px solid rgba(49, 91, 59, 0.2);
+
+  border-radius: 20px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 5px;
+
+  background: #315b3b;
+
+  color: #ffffff;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+
+.skincare-view-btn:hover {
+  background: #243f2c;
+
+  border-color: #243f2c;
+}
+
+
+.skincare-view-btn svg {
+  width: 11px;
+  height: 11px;
+
+  transition: transform 0.2s ease;
+}
+
+
+.skincare-view-btn:hover svg {
+  transform: translateX(2px);
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 950px) {
+  .skincare-section {
+    padding: 50px 24px;
+  }
+
+  .skincare-container {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .skincare-background {
+    position: relative;
+    width: 100%;
+    height: 280px;
+  }
+
+  .skincare-background::after {
+    background: linear-gradient(
+      180deg,
+      rgba(245, 245, 233, 0) 0%,
+      rgba(245, 245, 233, 0.4) 50%,
+      rgba(245, 245, 233, 1) 100%
+    );
+  }
+
+  .skincare-right {
+    width: 100%;
+    padding: 30px 24px 40px;
+  }
+
+  .skincare-header {
+    max-width: 100%;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+  .skincare-section {
+    padding: 45px 20px;
+  }
+
+  .skincare-background {
+    height: 220px;
+  }
+
+  .skincare-right {
+    padding: 24px 16px 30px;
+  }
+
+  .skincare-eyebrow {
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin-bottom: 6px;
+  }
+
+  .skincare-eyebrow::before {
+    width: 20px;
+    margin-right: 6px;
+  }
+
+  .skincare-header h2 {
+    font-size: 30px;
+    line-height: 1.15;
+    margin: 6px 0 12px;
+  }
+
+  .skincare-header p {
+    font-size: 13px;
+    line-height: 1.55;
+    margin: 12px 0 0;
+  }
+
+  .skincare-main-btn {
+    margin-top: 20px;
+    padding: 11px 22px;
+    font-size: 10.5px;
+  }
+
+  .skincare-products {
+    margin-top: 28px;
+    gap: 8px;
+  }
+
+  .skincare-product-card {
+    padding: 6px;
+    border-radius: 10px;
+  }
+
+  .skincare-product-image {
+    height: 90px;
+    border-radius: 8px;
+  }
+
+  .skincare-product-info {
+    padding: 6px 2px 2px;
+  }
+
+  .skincare-product-type {
+    font-size: 8px;
+  }
+
+  .skincare-product-info h3 {
+    font-size: 11px;
+    line-height: 1.2;
+  }
+
+  .skincare-product-bottom {
+    padding-top: 8px;
+    gap: 6px;
+  }
+
+  .skincare-product-bottom strong {
+    font-size: 10.5px;
+  }
+
+  .skincare-view-btn {
+    min-height: 26px;
+    padding: 4px 6px;
+    font-size: 8.5px;
+  }
+
+  .skincare-view-btn svg {
+    width: 9px;
+    height: 9px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+  .skincare-header h2 {
+    font-size: 28px;
+  }
+
+  .skincare-products {
+    gap: 6px;
+  }
+
+  .skincare-product-card {
+    padding: 5px;
+  }
+
+  .skincare-product-image {
+    height: 78px;
+  }
+
+  .skincare-product-info h3 {
+    font-size: 10px;
+  }
+
+  .skincare-product-type {
+    font-size: 7.5px;
+  }
+
+  .skincare-product-bottom strong {
+    font-size: 9.5px;
+  }
+
+  .skincare-view-btn {
+    font-size: 8px;
+    min-height: 24px;
+  }
+}

@@ -1,0 +1,135 @@
+.hg-story {
+  background: #faf9f1;
+  display: grid;
+  grid-template-columns: 0.95fr 1fr;
+  gap: 50px;
+  padding: 60px max(5%, calc((100% - 1180px) / 2));
+  align-items: center;
+}
+
+.hg-story-image-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.hg-story-image-wrap img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 48% 52% 45% 55% / 48% 43% 57% 52%;
+  display: block;
+}
+
+.hg-leaf-decoration {
+  position: absolute;
+  right: -14px;
+  top: 15px;
+  font-size: 45px;
+  transform: rotate(-20deg);
+  pointer-events: none;
+}
+
+/* Eyebrow / Label - matching previous sections */
+.hg-section-label {
+  display: block;
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #53665b;
+  margin-bottom: 8px;
+}
+
+/* Heading Typography */
+.hg-story-content h2 {
+  margin: 10px 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(38px, 3.8vw, 52px);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.6px;
+  color: #24352c;
+}
+
+.hg-story-content em {
+  font-style: italic;
+  color: #55745b;
+}
+
+/* Paragraph Typography */
+.hg-story-content p {
+  max-width: 560px;
+  margin: 18px 0 22px;
+  font-family: "Inter", sans-serif;
+  font-size: 14.5px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #66726b;
+}
+
+/* Button Styling */
+.hg-green-button {
+  border: none;
+  border-radius: 30px;
+  padding: 12px 24px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #315b3b;
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.hg-green-button:hover {
+  background: #243f2c;
+  transform: translateY(-1px);
+}
+
+/* Tablet & Mobile Screens */
+@media (max-width: 800px) {
+  .hg-story {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 45px 20px;
+  }
+
+  .hg-story-image-wrap img {
+    height: 240px;
+    max-width: 380px;
+    margin: 0 auto;
+  }
+
+  .hg-leaf-decoration {
+    font-size: 38px;
+    right: 15px;
+  }
+
+  .hg-section-label {
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin-bottom: 6px;
+  }
+
+  .hg-story-content h2 {
+    font-size: 30px;
+    line-height: 1.15;
+    margin: 6px 0 12px;
+  }
+
+  .hg-story-content p {
+    font-size: 13px;
+    line-height: 1.55;
+    margin: 12px 0 18px;
+    max-width: 100%;
+  }
+
+  .hg-green-button {
+    padding: 11px 22px;
+    font-size: 10.5px;
+  }
+}

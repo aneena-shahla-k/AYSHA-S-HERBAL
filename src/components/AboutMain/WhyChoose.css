@@ -1,0 +1,211 @@
+.hg-why {
+  padding: 60px max(5%, calc((100% - 1180px) / 2));
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+  background: #faf9f2;
+}
+
+/* Heading Typography */
+.hg-why-content h2 {
+  margin: 10px 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(38px, 3.8vw, 52px);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.6px;
+  color: #24352c;
+}
+
+.hg-why-content em { 
+  font-style: italic;
+  color: #55745b;  
+}
+
+/* Paragraph Typography */
+.hg-why-content p {
+  max-width: 560px;
+  margin: 18px 0 22px;
+  font-family: "Inter", sans-serif;
+  font-size: 14.5px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #66726b;
+}
+
+/* Reasons List */
+.hg-reasons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 10px;
+}
+
+.hg-reason {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.hg-reason-icon {
+  flex: 0 0 34px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #315b3b;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hg-reason h4 {
+  margin: 0 0 3px;
+  font-family: "Inter", sans-serif;
+  font-size: 13.5px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #183d29;
+}
+
+.hg-reason p {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+  line-height: 1.45;
+  color: #66726b;
+}
+
+/* Button Styling */
+.hg-why-content .hg-green-button {
+  margin-top: 28px;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 24px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #315b3b;
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.hg-why-content .hg-green-button:hover {
+  background: #243f2c;
+  transform: translateY(-1px);
+}
+
+/* Image & Bubble */
+.hg-why-image {
+  position: relative;
+}
+
+.hg-why-image img {
+  display: block;
+  width: 88%;
+  height: 380px;
+  margin-left: auto;
+  object-fit: cover;
+  border-radius: 42% 52% 45% 48%;
+}
+
+.hg-why-bubble {
+  position: absolute;
+  right: 0;
+  top: 30px;
+  width: 115px;
+  height: 115px;
+  border-radius: 50%;
+  background: #edf0df;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(18%);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.hg-why-bubble strong {
+  font-family: "Dancing Script", cursive;
+  font-size: 18px;
+  line-height: 1.1;
+  color: #315b3b;
+  font-weight: 600;
+}
+
+.hg-why-bubble span {
+  margin-top: 5px;
+  font-family: "Inter", sans-serif;
+  font-size: 10px;
+  color: #55745b;
+}
+
+/* Tablet & Mobile Screens */
+@media (max-width: 800px) {
+  .hg-why {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    padding: 45px 20px;
+  }
+
+  .hg-why-content h2 {
+    font-size: 30px;
+    line-height: 1.15;
+    margin: 6px 0 12px;
+  }
+
+  .hg-why-content p {
+    font-size: 13px;
+    line-height: 1.55;
+    margin: 12px 0 18px;
+    max-width: 100%;
+  }
+
+  .hg-reasons {
+    gap: 14px;
+  }
+
+  .hg-reason-icon {
+    width: 30px;
+    height: 30px;
+    flex: 0 0 30px;
+  }
+
+  .hg-reason h4 {
+    font-size: 12.5px;
+  }
+
+  .hg-reason p {
+    font-size: 10.5px;
+  }
+
+  .hg-why-content .hg-green-button {
+    margin-top: 22px;
+    padding: 11px 22px;
+    font-size: 10.5px;
+  }
+
+  .hg-why-image img {
+    width: 100%;
+    max-width: 340px;
+    height: 280px;
+    margin: 0 auto;
+  }
+
+  .hg-why-bubble {
+    width: 95px;
+    height: 95px;
+    top: 15px;
+    right: calc(50% - 170px);
+    transform: none;
+  }
+
+  .hg-why-bubble strong {
+    font-size: 15px;
+  }
+}
